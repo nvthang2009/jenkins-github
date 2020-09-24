@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Clone') {
             steps {
-                git credentialsId: 'webhook-2', url: 'https://gitlab.com/thangnv2009/webhook-2.git'
+                git 'https://github.com/nvthang2009/jenkins-github.git'
             }
         }
     }
