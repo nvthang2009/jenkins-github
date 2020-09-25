@@ -4,8 +4,6 @@ pipeline {
         stage('Clone') {
             steps {
                 git 'https://github.com/nvthang2009/jenkins-github.git'
-<<<<<<< HEAD
-=======
             }
         }
         stage('build') {
