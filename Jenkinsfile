@@ -15,9 +15,10 @@ pipeline {
             }
         stage('ssh'){
             steps {
-             sshagent(['keybuild']) {
-               sh 'ssh -o StrictHostKeyChecking=no -l root 10.120.102.20 touch test.txt'
-             }
+                sshagent(['keybuild']) {
+                    sh 'ssh -o StrictHostKeyChecking=no -l root 10.120.102.20 touch test.txt'
+                }
+            }
         }
     }
 }
