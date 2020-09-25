@@ -13,7 +13,7 @@ pipeline {
                     sh label: '', script: 'docker push thangnv/golang-test:v1'
                 }
             }
-        stage('ssh'){
+        stage('ssh') {
             steps {
                 sshagent(['keybuild']) {
                     sh 'ssh -o StrictHostKeyChecking=no -l root 10.120.102.20 touch test.txt'
